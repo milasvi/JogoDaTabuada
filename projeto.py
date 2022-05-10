@@ -14,7 +14,7 @@ if dificuldade == '1':
         num2 = randint(0,6)
         resposta = input(f'{num1} x {num2} = ')
         resolva = num1 * num2
-        if resposta == resolva:
+        if int(resposta) == resolva:
             contador2 = contador2 + 1
     print(f'Você acertou {contador2} vezes!')
         
