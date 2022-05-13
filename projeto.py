@@ -1,4 +1,9 @@
 from random import randint
+import pygame
+pygame.init()
+
+pygame.mixer.music.load('coin.mp3.wav')
+
 
 
 print("Bem-vinde ao JOGO da TABUADA! \nFunciona assim: Escolha a dificuldade e resolva as contas:")
@@ -14,8 +19,10 @@ if dificuldade == '1':
         num2 = randint(0,6)
         resposta = input(f'{num1} x {num2} = ')
         resolva = num1 * num2
+            
         if int(resposta) == resolva:
             contador2 = contador2 + 1
+            pygame.mixer.music.play()
         if int(resposta) != resolva:
             print(f'Péen! Na verdade é {resolva}')
     print(f'Você acertou {contador2} vezes!')
@@ -39,6 +46,7 @@ elif dificuldade == '2':
         resolva = num1 * num2
         resposta = input(f'{num1} x {num2} = ')
         if int(resposta) == resolva:
+            pygame.mixer.music.play()
             contador2 = contador2 + 1
         if int(resposta) != resolva:
             print(f'Péen! Na verdade é {resolva}')
@@ -62,6 +70,7 @@ elif dificuldade == '3':
         resolva = num1 * num2
         resposta = input(f'{num1} x {num2} = ')
         if int(resposta) == resolva:
+            pygame.mixer.music.play()
             contador2 = contador2 + 1
         if int(resposta) != resolva:
             print(f'Péen! Na verdade é {resolva}')
