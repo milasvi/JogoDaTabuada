@@ -1,5 +1,4 @@
-from codecs import replace_errors
-from logging import captureWarnings
+#bibliotecas
 from random import randint
 from time import sleep
 import pygame
